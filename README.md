@@ -10,3 +10,8 @@
 4. Create .env file by following the example in env.example.
 5. Add your API KEY to .evn file
 6. Run `npm start`
+
+
+# Screenshots
+<img src="https://github.com/serhii12/Yotube-Api-Playground/blob/master/docs/ScreenShot1.png"/>
+<img src="https://github.com/serhii12/Yotube-Api-Playground/blob/master/docs/ScreenShot2.png"/>
