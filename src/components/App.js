@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import yotube from '../api/yotube';
 import SearchBar from './SearchBar';
 import VideoList from './VideoList';
+import VideoDetail from './VideoDetail';
 
 export default class App extends Component {
   state = {
@@ -18,12 +19,17 @@ export default class App extends Component {
     this.setState({ videos, selectedVideo });
   };
 
+  onVideoSelect = video => {
+    this.setState({ selectedVideo: video });
+  };
+
   render() {
     const { videos, selectedVideo } = this.state;
     return (
       <div className="ui container" style={{ marginTop: '10px' }}>
         <SearchBar onSubmit={this.onSubmit} />
-        <VideoList videos={videos} />
+        <VideoDetail video={selectedVideo} />
+        <VideoList videos={videos} onVideoSelect={this.onVideoSelect} />
       </div>
     );
   }
