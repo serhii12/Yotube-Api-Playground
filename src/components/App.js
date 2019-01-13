@@ -7,12 +7,16 @@ export default class App extends Component {
     videos: [],
   };
 
+  onSubmit = searchText => {
+    console.log(searchText);
+  };
+
   render() {
-    const { images } = this.state;
+    const { videos } = this.state;
     return (
       <div className="ui container" style={{ marginTop: '10px' }}>
-        <SearchBar />
-        <VideoList videos={images} />
+        <SearchBar onSubmit={this.onSubmit} />
+        <VideoList videos={videos} />
       </div>
     );
   }
